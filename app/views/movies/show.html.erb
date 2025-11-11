@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="card shadow-lg border-0 rounded-4 mx-auto" style="max-width: 600px;">
+    <div class="card-body text-center p-4">
+      <h2 class="card-title mb-4 text-primary fw-bold"><%= @movie.title %></h2>
+
+      <p class="mb-2">
+        <strong class="text-secondary">Rating:</strong>
+        <span class="text-dark"><%= @movie.rating %></span>
+      </p>
+
+      <p class="mb-3">
+        <strong class="text-secondary">Description:</strong><br>
+        <span class="text-muted"><%= @movie.description.presence || "No description available." %></span>
+      </p>
+
+      <p class="mb-4">
+        <strong class="text-secondary">Release Date:</strong>
+        <span class="text-dark"><%= @movie.release_date.strftime("%B %d, %Y") if @movie.release_date %></span>
+      </p>
+
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <%= link_to 'Edit', edit_movie_path(@movie), class: "btn btn-warning px-4 fw-semibold" %>
+        <%= link_to 'Back', movies_path, class: "btn btn-outline-secondary px-4 fw-semibold" %>
+      </div>
+    </div>
+  </div>
+</div>
