@@ -14,7 +14,7 @@ group :production do
 end
 
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier'
+gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
@@ -22,3 +22,5 @@ gem 'jbuilder', '~> 2.7'
 gem 'puma'
 gem 'execjs'
 gem 'terser'
+
+
