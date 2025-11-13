@@ -1,27 +1,19 @@
 Rails.application.configure do
-  # Code is not reloaded between requests
   config.cache_classes = true
-
-  # Eager load on boot
   config.eager_load = true
 
-  # Disable full error reports
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
-  # Heroku: serve static assets
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || true
+  # Heroku static files
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  # Use Uglifier for JS compression (Rails 5 compatible)
+  # JS compressor
   config.assets.js_compressor = Uglifier.new(harmony: true)
 
-  # Allow fallback to asset pipeline
+  # Allow asset fallback
   config.assets.compile = true
 
-  # Enable gzip compression
-  config.assets.gzip = true
-
-  # Logging
   config.log_level = :info
   config.log_tags = [:request_id]
 
