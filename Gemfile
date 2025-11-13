@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '3.1.4'
 
 # Rails
-gem 'rails', '~> 5.0.7'
+gem 'rails', '~> 5.2.8'
 
 # Development + test use sqlite3
 group :development, :test do
@@ -22,10 +22,10 @@ end
 # Asset pipeline + UI
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 2.5.0'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', '~> 2.7'
 
 # Server
 gem 'puma', '~> 3.12'
