@@ -16,7 +16,6 @@ end
 # Production uses PostgreSQL (Heroku)
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
 end
 
 # Asset pipeline + UI
