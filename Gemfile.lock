@@ -201,7 +201,6 @@ DEPENDENCIES
   mini_racer
   pg
   puma (~> 4.3)
-  rack (= 2.2.8)
   rails (= 5.2.8.1)
   sass-rails (~> 5.0)
   sqlite3 (~> 1.4)
