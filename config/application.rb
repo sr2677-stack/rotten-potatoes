@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Apply Ruby 3.1 compatibility patch
+require_relative '../lib/ruby_3_1_patch'
+Ruby31Patch.apply!
+
 module Rottenpotatoes
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

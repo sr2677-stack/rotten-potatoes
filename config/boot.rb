@@ -12,14 +12,14 @@ rescue LoadError
 end
 
 # Patch for Ruby 3.1+ and Rails 5.2 compatibility
-# This must be here in boot.rb to load before the middleware stack
-require 'action_dispatch/middleware/static'
-
-module ActionDispatch
-  class Static
+# Wait until ActionDispatch is actually loaded
+Rails.application.config.before_initialize do
+  ActionDispatch::Static.class_eval do
+    remove_method :initialize if method_defined?(:initialize)
+    
     def initialize(app, path, index: 'index', headers: {})
       @app = app
-      @file_handler = FileHandler.new(path, index: index, headers: headers)
+      @file_handler = ActionDispatch::FileHandler.new(path, index: index, headers: headers)
     end
   end
 end
