@@ -22,7 +22,7 @@ end
 # Asset pipeline / Front-end
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 2.5.0'
 gem 'jbuilder', '~> 2.0'
