@@ -9,13 +9,21 @@ Bundler.require(*Rails.groups)
 module Rottenpotatoes
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 5.2
 
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    # ADD THIS BLOCK HERE - Patch for Ruby 3.1+ compatibility
+    config.before_initialize do
+      require 'action_dispatch/middleware/static'
+      
+      ActionDispatch::Static.class_eval do
+        def initialize(app, path, index: 'index', headers: {})
+          @app = app
+          @file_handler = ActionDispatch::FileHandler.new(path, index: index, headers: headers)
+        end
+      end
+    end
+    # END OF PATCH
+
+    # rest of your configuration...
   end
 end
