@@ -6,7 +6,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   # FIX FOR HEROKU + RAILS 5.2
-  config.public_file_server.enabled = true
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # JS compressor
   config.assets.js_compressor = Uglifier.new(harmony: true)
