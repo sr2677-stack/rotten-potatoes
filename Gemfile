@@ -1,25 +1,33 @@
 source 'https://rubygems.org'
-ruby '3.1.4'
+ruby '2.7.8'
 
-gem 'rails', '5.2.8.1'
-gem 'puma', '~> 4.3'
+# Rails core
+gem 'rails', '4.2.11'
+gem 'sqlite3', '~> 1.3.13'
 
+# Asset pipeline and front-end
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 4.1.20'
-gem 'coffee-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.7'
+gem 'turbolinks', '~> 2.5.0'
+gem 'jbuilder', '~> 2.0'
 
-gem 'execjs'
-gem 'mini_racer', platforms: :ruby
+# Development tools
+gem 'byebug'
+gem 'web-console', '~> 2.0'
 
-group :development, :test do
-  gem 'sqlite3', '~> 1.4'
-  gem 'byebug'
-  gem 'capybara'
-end
+# Test framework compatible with Rails 4
+gem 'capybara', '~> 2.18.0'
 
-group :production do
-  gem 'pg'
-end
+# Use Puma (lightweight webserver)
+gem 'puma', '~> 3.12.0'
+
+
+
+
+
+
+
+
+
