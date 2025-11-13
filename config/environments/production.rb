@@ -5,17 +5,15 @@ Rails.application.configure do
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
-  # REQUIRED for Heroku
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  # FIX FOR HEROKU + RAILS 5.2
+  config.public_file_server.enabled = true
 
-  # JS compressor — must use Uglifier with harmony for ES6
+  # JS compressor
   config.assets.js_compressor = Uglifier.new(harmony: true)
 
-  # Required for Rails 5 + Heroku
+  # Asset pipeline
   config.assets.compile = true
-
-  # ❌ REMOVE THIS LINE (was causing crash)
-  # config.assets.digest = true
+  config.assets.digest = true
 
   config.log_level = :info
   config.log_tags = [:request_id]

@@ -23,3 +23,4 @@ This is a simple Ruby on Rails 4.2 application for cataloging movies. It allows 
 
 ## Author
 Shivani Reddy Rokkam
+# flush
