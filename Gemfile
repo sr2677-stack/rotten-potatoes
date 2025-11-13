@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
-ruby '2.7.7'
+ruby '3.1.4'
+
 
 # Core Rails
-gem 'rails', '4.2.11'
+gem 'rails', '5.2.8.1'
+
 
 # Use sqlite3 in development & test only
 group :development, :test do
   gem 'sqlite3', '~> 1.3.13'
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
+  # gem 'byebug'
+  # gem 'web-console', '~> 2.0'
   gem 'capybara', '~> 2.18.0'
 end
 
