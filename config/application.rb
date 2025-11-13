@@ -6,18 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-# PATCH FOR RUBY 3.1+ COMPATIBILITY - Add this BEFORE the module declaration
-if defined?(ActionDispatch::Static)
-  module ActionDispatch
-    class Static
-      def initialize(app, path, index: 'index', headers: {})
-        @app = app
-        @file_handler = FileHandler.new(path, index: index, headers: headers)
-      end
-    end
-  end
-end
-
 module Rottenpotatoes
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
