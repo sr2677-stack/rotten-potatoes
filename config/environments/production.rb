@@ -13,7 +13,9 @@ Rails.application.configure do
 
   # Required for Rails 5 + Heroku
   config.assets.compile = true
-  config.assets.digest = true
+
+  # ❌ REMOVE THIS LINE (was causing crash)
+  # config.assets.digest = true
 
   config.log_level = :info
   config.log_tags = [:request_id]
