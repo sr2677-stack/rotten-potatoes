@@ -24,3 +24,4 @@ gem 'puma', '~> 6.4'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.11'
 gem 'coffee-rails', '~> 5.0'
+

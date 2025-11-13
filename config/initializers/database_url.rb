@@ -1,4 +1,10 @@
-# Force Rails to use DATABASE_URL in production
 if Rails.env.production?
-  ENV['DATABASE_URL'] ||= ENV['HEROKU_POSTGRESQL_URL']
+  ActiveRecord::Base.configurations = {
+    Rails.env => {
+      "adapter"  => "postgresql",
+      "url"      => ENV["DATABASE_URL"]
+    }
+  }
+
+  ActiveRecord::Base.establish_connection
 end
