@@ -2,34 +2,25 @@ source 'https://rubygems.org'
 
 ruby '3.1.4'
 
-# Rails
-gem 'rails', '~> 6.1.7'
+gem 'rails', '~> 7.1.3'
 
-
-# Development + test use sqlite3
+# Database
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'capybara', '~> 2.18.0'
+  gem 'sqlite3', '~> 1.6'
 end
 
-# Production uses PostgreSQL (Heroku)
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 1.6'
 end
 
-# Asset pipeline + UI
-gem 'sass-rails', '~> 5.0'
+# Assets
+gem 'sass-rails', '6.0'
+gem 'sprockets-rails', '~> 3.4'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
-gem 'turbolinks', '~> 2.5.0'
-gem 'jbuilder', '~> 2.7'
 
-# Server
-gem 'puma', '~> 3.12'
-
-
-gem 'rack', '~> 2.0.8'
-
+# Other
+gem 'puma', '~> 6.4'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.11'
+gem 'coffee-rails', '~> 5.0'
