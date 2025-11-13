@@ -2,7 +2,6 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-   config.active_record.database_configuration = nil
   # Code is not reloaded between requests.
   config.enable_reloading = false
 
@@ -94,11 +93,5 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
-
- config.active_record.database_selector = { delay: 0 }
-config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
-config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-
-
 
 end
