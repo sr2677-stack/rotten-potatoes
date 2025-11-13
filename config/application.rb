@@ -8,8 +8,9 @@ module Rottenpotatoes
   class Application < Rails::Application
     config.load_defaults 6.1
 
-    # Use new Rails 6.1 logger system
-    config.logger = ActiveSupport::Logger.new($stdout)
-    config.log_level = :info
+    # Do NOT configure logger here (Rails 6.1 will handle it per environment)
+    # REMOVE:
+    # config.logger = ActiveSupport::Logger.new($stdout)
+    # config.log_level = :info
   end
 end
