@@ -28,3 +28,7 @@ gem 'jbuilder', '~> 2.7'
 
 # Server
 gem 'puma', '~> 3.12'
+
+
+gem 'rack', '~> 2.0.8'
+
