@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.7.8'
 
 # Rails core
-gem 'rails', '4.2.11'
+gem 'rails', '5.0.7'
 gem 'sqlite3', '~> 1.3.13'
 
 # Asset pipeline and front-end
