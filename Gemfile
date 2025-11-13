@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
-ruby '3.1.4'  # Change this from 3.1.4
+ruby '3.1.2'
 
 gem 'rails', '5.2.8.1'
-gem 'rack', '2.2.8'
 gem 'puma', '~> 4.3'
 
 gem 'sass-rails', '~> 5.0'
